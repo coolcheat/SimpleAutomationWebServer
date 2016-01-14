@@ -31,10 +31,10 @@ namespace SimpleAutomationWebServer
             thread.Start();
             var handle = GetConsoleWindow();
             // Hide
-            ShowWindow(handle, SW_HIDE);
+            //ShowWindow(handle, SW_HIDE);
 
             // Show
-            //ShowWindow(handle, SW_SHOW);
+            ShowWindow(handle, SW_SHOW);
 
 
         }
