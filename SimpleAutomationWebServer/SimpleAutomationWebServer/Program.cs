@@ -11,6 +11,7 @@ namespace SimpleAutomationWebServer
 {
     class Program
     {
+
         [DllImport("kernel32.dll")]
         static extern IntPtr GetConsoleWindow();
 
