@@ -22,6 +22,22 @@ namespace SimpleAutomationWebServer
 
         static void Main(string[] args)
         {
+            var handle = GetConsoleWindow();
+            if (args.Length > 0)
+            {
+                if(args[0].Equals("debug")){
+                    ShowWindow(handle, SW_SHOW);  // show the console window for debug purposes
+                }
+                else
+                {
+                    ShowWindow(handle, SW_HIDE);  // hdie the console
+                }
+            }
+            else
+            {
+                ShowWindow(handle, SW_HIDE);  // hide the console
+            }
+
 
             HttpServer httpServer;
 
@@ -29,12 +45,12 @@ namespace SimpleAutomationWebServer
 
             Thread thread = new Thread(new ThreadStart(httpServer.listen));
             thread.Start();
-            var handle = GetConsoleWindow();
+            //var handle = GetConsoleWindow();
             // Hide
             //ShowWindow(handle, SW_HIDE);
 
             // Show
-            ShowWindow(handle, SW_SHOW);
+            //ShowWindow(handle, SW_SHOW);
 
 
         }
