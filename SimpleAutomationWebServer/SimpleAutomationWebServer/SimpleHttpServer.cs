@@ -275,6 +275,22 @@ namespace Bend.Util
                 SendKeys.SendWait(" ");
 
             }
+            else if (String.Equals(action, "back",
+                   StringComparison.OrdinalIgnoreCase))
+            {
+                p.writeSuccess();
+                p.outputStream.WriteLine("back");
+                SendKeys.SendWait("{LEFT} {LEFT} {LEFT} {LEFT} {LEFT}");
+
+            }
+            else if (String.Equals(action, "forward",
+                   StringComparison.OrdinalIgnoreCase))
+            {
+                p.writeSuccess();
+                p.outputStream.WriteLine("forward");
+                SendKeys.SendWait("{RIGHT} {RIGHT} {RIGHT} {RIGHT} {RIGHT}");
+
+            }
             
             
             /*
